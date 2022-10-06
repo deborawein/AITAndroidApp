@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/birthdayFragment">
+
+    <fragment
+        android:id="@+id/birthdayContactFragment"
+        android:name="com.example.hiphooray.ui.main.contact.BirthdayContactFragment"
+        android:label="fragment_birthday_contact"
+        tools:layout="@layout/fragment_birthday_contact" >
+        <action
+            android:id="@+id/action_birthdayContactFragment_to_updateBirthdayContactFragment"
+            app:destination="@id/updateBirthdayContactFragment" />
+        <action
+            android:id="@+id/action_birthdayContactFragment_to_messageBirthdayContactFragment"
+            app:destination="@id/messageBirthdayContactFragment" />
+        <action
+            android:id="@+id/action_birthdayContactFragment_to_birthdayFragment"
+            app:destination="@id/birthdayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBirthdayContactFragment"
+        android:name="com.example.hiphooray.ui.main.contact.UpdateBirthdayContactFragment"
+        android:label="fragment_update_birthday_contact"
+        tools:layout="@layout/fragment_update_birthday_contact" >
+        <action
+            android:id="@+id/action_updateBirthdayContactFragment_to_birthdayContactFragment"
+            app:destination="@id/birthdayContactFragment" />
+        <action
+            android:id="@+id/action_updateBirthdayContactFragment_to_birthdayFragment"
+            app:destination="@id/birthdayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageBirthdayContactFragment"
+        android:name="com.example.hiphooray.ui.main.contact.MessageBirthdayContactFragment"
+        android:label="fragment_message_birthday_contact"
+        tools:layout="@layout/fragment_message_birthday_contact" >
+        <action
+            android:id="@+id/action_messageBirthdayContactFragment_to_birthdayFragment"
+            app:destination="@id/birthdayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/birthdayFragment"
+        android:name="com.example.hiphooray.ui.main.BirthdayFragment"
+        android:label="fragment_birthday"
+        tools:layout="@layout/fragment_birthday" >
+        <action
+            android:id="@+id/action_birthdayFragment_to_birthdayContactFragment"
+            app:destination="@id/birthdayContactFragment" />
+        <action
+            android:id="@+id/action_birthdayFragment_to_messageBirthdayContactFragment"
+            app:destination="@id/messageBirthdayContactFragment" />
+        <action
+            android:id="@+id/action_birthdayFragment_to_addBirthdayContactFragment"
+            app:destination="@id/addBirthdayContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBirthdayContactFragment"
+        android:name="com.example.hiphooray.ui.main.contact.AddBirthdayContactFragment"
+        android:label="fragment_add_birthday_contact"
+        tools:layout="@layout/fragment_add_birthday_contact" >
+        <action
+            android:id="@+id/action_addBirthdayContactFragment_to_birthdayFragment"
+            app:destination="@id/birthdayFragment" />
+    </fragment>
+</navigation>
